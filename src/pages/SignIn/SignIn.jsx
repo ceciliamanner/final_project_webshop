@@ -43,7 +43,7 @@ const SignIn = () => {
           signInFormData.password
         );
         const user = userCredential.user;
-        navigate("/games");
+        navigate("/products");
         console.log("Successfully signed in", user);
         setSignInFormData({
           email: "",

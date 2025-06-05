@@ -2,7 +2,7 @@ import styles from "./ProductItem.module.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, onBuyClick }) => {
 
   return (
     <div className={styles.productCard}>
@@ -28,7 +28,7 @@ const ProductItem = ({ product }) => {
       Details
     </Link> */}
 
-    <Button className={styles.addToCartBtn} /* onClick={handleAddToCart} */>
+    <Button className={styles.addToCartBtn} onClick={onBuyClick}/* onClick={handleAddToCart} */>
       Add to cart
     </Button>
   </div>
