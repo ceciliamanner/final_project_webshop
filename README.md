@@ -4,11 +4,11 @@
 This project is part of the Frontend Development course and showcases a full-stack web application called Secondo. It enables users to buy and sell second-hand clothing in a clean, user-friendly environment. The goal is to promote sustainable consumption and circular fashion practices through intuitive design and reliable features.
 
 ## Live Demo
-🌍 [View the deployed site on Netlify] 
+🌍 https://secondo-webshop.netlify.app/
 
 ## Installation
-git clone  
-cd 
+git clone https://github.com/ceciliamanner/final_project_webshop.git
+cd final_project_webshop
 npm install  
 npm run dev  
 
