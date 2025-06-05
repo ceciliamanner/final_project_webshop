@@ -1,43 +1,75 @@
+.profileWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
 .userInfo {
-    display: flex;
-    align-items: center;
-    gap: var(--space-medium);
-    background-color: var(--card-color);
-    padding: var(--space-medium);
-    border-radius: var(--border-radius-large);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    margin-bottom: var(--space-large);
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.profileImage {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color-dark);
+}
+
+.createListingBtn {
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-color-dark);
+  transform: scale(1.05);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color-dark);
+}
+
+.listingsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 600px) {
   .profileImage {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; /* gör den rund */
-    object-fit: cover;
-    border: 2px solid var(--primary-color);
-  }
-  
-  .userInfo h2 {
-    color: var(--text-color);
-    font-size: var(--medium-font-size);
-    font-weight: 600;
+    width: 100px;
+    height: 100px;
   }
 
-  .createListingBtn {
-    margin-top: var(--space-medium);
-    display: inline-block;
-  }
-  
   .button {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    border: none;
-    padding: var(--space-small) var(--space-medium);
-    border-radius: var(--border-radius-medium);
-    font-size: var(--base-font-size);
-    transition: background-color 0.3s;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
-  
-  .button:hover {
-    background-color: var(--primary-color-dark);
-  }
+}

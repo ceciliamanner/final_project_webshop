@@ -1,85 +1,85 @@
+import { getAuthContext } from "../../context/authContext";
 import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { getAuthContext } from "../../context/authContext";
 import Button from "../Button/Button";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { auth } from "../../../firebaseConfig.js";
 import { signOut } from "firebase/auth";
-import { auth } from "../../../firebaseConfig";
+import { useNavigate } from "react-router-dom";
+
 
 const Navbar = () => {
-  const { user } = getAuthContext();
+  const {user} = getAuthContext()
   const navigate = useNavigate();
-
-  const handleSignOut = async () => {
+  
+  const handleSignout = async () => {
     try {
-      await signOut(auth);
-      navigate("/");
-      console.log("User signed out");
+      await signOut(auth); 
+      navigate("/")
     } catch (error) {
-      console.error("Sign out failed:", error.message);
+      console.log("error");
+      
     }
-  };
+  }
+
 
   return (
-    <nav className={styles.navbar}>
-      {/* Top row with logo and user options */}
-      <div className={styles.firstRow}>
-        <div className={styles.logo}>
-          <img src="/icons/secondo-logo.png" alt="Secondo logo" />
-        </div>
-
-        <div className={styles.userSection}>
-          {user ? (
-            <>
-              <Button className={styles.signOutButton} onClick={handleSignOut}>
-                Sign out
-              </Button>
-              <Link to="/profile" className={styles.profileButton}>
-                {user.imageUrl ? (
-                  <img src={user.imageUrl} alt="User profile" />
-                ) : (
-                  <FontAwesomeIcon icon={faUser} className={styles.profileIcon} />
-                )}
-              </Link>
-            </>
+   <nav className={styles.navbar}>
+    <div className={styles.firstRow}>
+      <div className={styles.logo}>
+          <img 
+          src="/icons/secondo-logo.png"
+          alt="secondo-logo" />
+      </div>
+      {/*--------------------------*/}
+      <div className={styles.cartHamburgerMenu}>
+      {user ? (
+            <Button className={styles.signOutButton} onClick={handleSignout}>
+              Sign out
+            </Button>
           ) : (
             <Link to="/sign-in" className={styles.signInLink}>
-              Register / Log in
+              Register/Log in
             </Link>
           )}
-        </div>
-      </div>
+          {user && (
+            <Link to="/profile" className={styles.profileButton}>
+              {user.imageUrl ? (
+                <img src={user.imageUrl} alt="User's profile picture" />
+              ) : (
+                <FontAwesomeIcon icon={faUser} className={styles.profileIcon} />
+              )}
+            </Link>
+          )}
 
-      {/* Bottom row with navigation */}
-      <div className={styles.secondRow}>
+      </div>
+    </div>
+    <div className={styles.secondRow}>
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            `${styles.navLink} ${isActive ? styles.activeLink : ""}`
+          className={({ isActive }) => `${styles.navLink} ${isActive ? styles.activeLink : ""}`
           }
         >
           Home
         </NavLink>
         <NavLink
           to="/products"
-          className={({ isActive }) =>
-            `${styles.navLink} ${isActive ? styles.activeLink : ""}`
+          className={({ isActive }) => `${styles.navLink} ${isActive ? styles.activeLink : ""}`
           }
         >
           Browse
         </NavLink>
         <NavLink
           to="/profile"
-          className={({ isActive }) =>
-            `${styles.navLink} ${isActive ? styles.activeLink : ""}`
+          className={({ isActive }) => `${styles.navLink} ${isActive ? styles.activeLink : ""}`
           }
         >
           Profile
         </NavLink>
       </div>
-    </nav>
-  );
-};
+   </nav>
+  )
+}
 
-export default Navbar;
+export default Navbar

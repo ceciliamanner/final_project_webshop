@@ -1,12 +1,35 @@
-# React + Vite
+# Secondo – Secondhand Clothing Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
+This project is part of the Frontend Development course and showcases a full-stack web application called Secondo. It enables users to buy and sell second-hand clothing in a clean, user-friendly environment. The goal is to promote sustainable consumption and circular fashion practices through intuitive design and reliable features.
 
-Currently, two official plugins are available:
+## Live Demo
+🌍 [View the deployed site on Netlify] 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+git clone  
+cd 
+npm install  
+npm run dev  
 
-## Expanding the ESLint configuration
+## Usage
+- Visit the site and click Register / Log in
+- Create an account and confirm your email via the link
+- Access your profile to create a new listing
+- Browse available second-hand clothing from others
+- (Future feature) Contact sellers and arrange purchases
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+- User sign-up and login via Firebase Authentication
+- Email verification after registration
+- Create and manage clothing listings
+- Browse listings from other users
+- Profile page with personal info and listings
+- Modal-based login prompt for protected routes
+- Image upload for profiles and products via Cloudinary
+- Built with React (Vite)
+- CSS Modules for component styling
+
+## License
+This project is licensed under MIT License
+

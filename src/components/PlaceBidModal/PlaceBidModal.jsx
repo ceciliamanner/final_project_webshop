@@ -33,8 +33,8 @@ const PlaceBidModal = ({ product, onClose }) => {
         ...product,
         ...paymentValues,
       });
-      // 🔥 Lägg till Firebase-kod här
-      onClose(); // stänger modalen efter submit
+     
+      onClose(); 
     }
   };
 

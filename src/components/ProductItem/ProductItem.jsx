@@ -24,12 +24,8 @@ const ProductItem = ({ product, onBuyClick }) => {
         {product.price} NOK
     </p>
 
-    {/* <Link to={`/products/${product.id}`} className={styles.productLink}>
-      Details
-    </Link> */}
-
-    <Button className={styles.addToCartBtn} onClick={onBuyClick}/* onClick={handleAddToCart} */>
-      Add to cart
+    <Button className={styles.addToCartBtn} onClick={onBuyClick}>
+      Buy
     </Button>
   </div>
   );

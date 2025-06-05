@@ -47,13 +47,13 @@ const Profile = () => {
           <h2>
             {userData.firstname} {userData.lastname}
           </h2>
-          <Link to="/create-listing" className={styles.createListingBtn}>
-          <button className={styles.button}>Create New Listing</button>
-          </Link>
         </div>
       )}
 
       <h3>My Listings</h3>
+      <Link to="/create-listing" className={styles.createListingBtn}>
+          <button className={styles.button}>Create New Listing</button>
+      </Link>
       <div className={styles.listingsContainer}>
         {myListings.map((product) => (
           <ProductItem key={product.id} product={product} />

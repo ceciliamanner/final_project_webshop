@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { database } from "../../../firebaseConfig";
 import { getAuthContext } from "../../context/authContext";
-/* import { useAuth } from "../../hooks/useAuth"; // för att koppla listing till user */
+
 
 const CreateListing = () => {
     const [listingDetails, setListingDetails] = useState({
@@ -19,7 +19,7 @@ const CreateListing = () => {
     const fileInputRef = useRef(null);
     const navigate = useNavigate();
     const { uploadImage } = useImageUpload();
-    const { user } = getAuthContext(); // du behöver bara detta från hooken
+    const { user } = getAuthContext(); 
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -60,20 +60,20 @@ const CreateListing = () => {
         e.preventDefault();
       
         try {
-          // Validera fält (kan göras mer noggrant om du har custom hook)
+         
           if (!listingDetails.title || !listingDetails.image || !listingDetails.price) {
             console.log("Missing required fields");
             return;
           }
       
-          // 1. Ladda upp bilden till Cloudinary
+      
           const uploadedImageUrl = await uploadImage(listingDetails.image, "listings");
       
-          // 2. Skicka till Firestore (collection: listings)
+   
           const newListing = {
             ...listingDetails,
             imageUrl: uploadedImageUrl,
-            image: null, // vi skickar inte själva filen
+            image: null, 
             previewUrl: null,
             price: Number(listingDetails.price),
             userId: user?.uid || null,
@@ -84,7 +84,7 @@ const CreateListing = () => {
           await addDoc(collection(database, "products"), newListing);
           console.log("Listing created!");
       
-          // 3. Rensa formuläret
+    
           setListingDetails({
             title: "",
             category: "",
@@ -94,12 +94,12 @@ const CreateListing = () => {
             price: "",
           });
       
-          /* fileInputRef.current.value = ""; */
+      
           if (fileInputRef.current) {
             fileInputRef.current.value = "";
         }
       
-          // 4. Navigera till exempelvis profil eller products
+
           navigate("/profile");
         } catch (error) {
           console.error("Error creating listing", error);

@@ -71,10 +71,10 @@
   }
     
   .imagePreview {
-    width: 250px; /* Ensures the image stays small */
-    height: 250px; /* Maintains proportional scaling */
-    object-fit: cover; /* Prevents distortion and keeps scaling proportional */
-    overflow: hidden; /* Prevent image from spilling outside */
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
+    overflow: hidden; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,16 +84,16 @@
   
   .removeImageButton {
     margin-top: 8px;
-    background-color: #ff4d4d; /* Red for emphasis */
+    background-color: #ff4d4d; 
     color: white;
     border: none;
     border-radius: 4px;
-    padding: 6px 10px; /* Compact padding */
-    font-size: 14px; /* Standard button text size */
-    cursor: pointer; /* Indicates clickable action */
+    padding: 6px 10px; 
+    font-size: 14px; 
+    cursor: pointer; 
   }
   
   .removeImageButton:hover {
-    background-color: #e60000; /* Slightly darker red for hover effect */
+    background-color: #e60000; 
   }
   

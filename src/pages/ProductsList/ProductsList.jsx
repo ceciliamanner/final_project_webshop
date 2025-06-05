@@ -9,11 +9,9 @@ const ProductsList = () => {
   const allListings = useFetchListings();
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  // ✅ 1. State för modal & vald produkt
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  // ✅ 2. Funktion som triggar modal + produkt
   const handleBuyClick = (product) => {
     setSelectedProduct(product);
     setShowModal(true);
@@ -38,12 +36,12 @@ const ProductsList = () => {
           <ProductItem
             key={product.id}
             product={product}
-            onBuyClick={() => handleBuyClick(product)} // ✅ 3. Skickar in hanterare till knappen
+            onBuyClick={() => handleBuyClick(product)} 
           />
         ))}
       </div>
 
-      {/* ✅ 4. Visar modal om produkt valts */}
+  
       {showModal && (
         <PlaceBidModal
           product={selectedProduct}
