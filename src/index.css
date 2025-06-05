@@ -1,68 +1,42 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Exo2-VariableFont;
+  text-decoration: none;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+:root {
+  --primary-color: #c38ccf;          /* Soft lilac – huvudfärg */
+  --primary-color-dark: #8a5ca0;     /* Mörkare kontrast till primary */
+  --secondary-color: #ea878e;        /* Pastellrosa – varm accent */
+  --secondary-color-light: #fce6ed;  /* Ljusrosa för bakgrunder/hover */
+  --background-color: #fffaff;       /* Nästan vit med lila underton */
+  --card-color: #e6d9f0;             /* Mild lila till cards */
+  --text-color: #4d3a54;             /* Mörk plommonlila för bra kontrast */
+  --text-light: #ffffff;             /* Vit text på färgade bakgrunder */
+  --text-error: #d1465c;             /* Mjukare crimson-ton för errors */
+  --highlight-color: #ffdae0;        /* Sött rosa highlight/fokus */
+  
+
+  /* Fonts */
+  --base-font-size: 1rem;
+  --medium-font-size: 1.5rem;
+  --large-font-size: 2rem;
+  --x-large-font-size: 3rem;
+  --xx-large-font-size: 4rem;
+
+  /* Spacing */
+  --space-small: 0.5rem;
+  --space-medium: 1rem;
+  --space-large: 2rem;
+  --space-x-large: 4rem;
+
+  /* Border Radius */
+  --border-radius-small: 0.25rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-large: 1rem;
 }

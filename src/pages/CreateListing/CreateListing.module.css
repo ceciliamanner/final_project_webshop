@@ -1,0 +1,99 @@
+.CreateListingContainer {
+    min-height: 100vh;
+    background-color: var(--background-color); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .CreateListingForm {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--primary-color-light); 
+    padding: 2rem;
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .CreateListingForm h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .input,
+  .select,
+  .textarea,
+  .fileInput {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--primary-color);
+    font-size: 1rem;
+  }
+  
+  .textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .submitButton {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 0.75rem;
+    border: none;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    margin-top: 1rem;
+  }
+  
+  .submitButton:hover {
+    opacity: 0.85;
+  }
+
+  span{
+    color: var(--text-color);
+    margin-top: 1rem;
+  }
+
+  .imagePreviewContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+    
+  .imagePreview {
+    width: 250px; /* Ensures the image stays small */
+    height: 250px; /* Maintains proportional scaling */
+    object-fit: cover; /* Prevents distortion and keeps scaling proportional */
+    overflow: hidden; /* Prevent image from spilling outside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-small);
+    
+  }
+  
+  .removeImageButton {
+    margin-top: 8px;
+    background-color: #ff4d4d; /* Red for emphasis */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px; /* Compact padding */
+    font-size: 14px; /* Standard button text size */
+    cursor: pointer; /* Indicates clickable action */
+  }
+  
+  .removeImageButton:hover {
+    background-color: #e60000; /* Slightly darker red for hover effect */
+  }
+  

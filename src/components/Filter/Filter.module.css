@@ -1,0 +1,12 @@
+  
+  .select {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: var(--border-radius-medium);
+    background-color: var(--secondary-color-light);
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+    font-family: inherit;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+  }
